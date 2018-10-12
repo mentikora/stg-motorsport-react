@@ -1,0 +1,12 @@
+// what we do list
+.list-of-work{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item{
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+  }
+}

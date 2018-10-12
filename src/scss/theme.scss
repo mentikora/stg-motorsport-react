@@ -1,0 +1,19 @@
+@import './normalize.scss';
+@import './variables.scss';
+@import './typography.scss';
+
+body{
+  margin: 0;
+  padding: 0;
+
+  font: {
+    family: $default-font;
+    size: 16px;
+  }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-center{
+  text-align: center;
+}

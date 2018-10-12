@@ -1,0 +1,19 @@
+.heading{
+  font-weight: 700;
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+  &--1{
+    font-size: 2rem;
+  }
+
+  &--2{
+    font-size: 1.8rem;
+  }
+
+  &--3{
+    font-size: 1.6rem;
+  }
+
+}
