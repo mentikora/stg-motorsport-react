@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Comment } from '../../components/Comment';
 
 import './index.scss';
 
@@ -13,10 +14,17 @@ export class Homepage extends Component {
           <h2 className="heading heading--2">
             {about.title}
           </h2>
-          {about.text}
+          <p>
+            {about.text}
+          </p>
+        </section>
+        <section className="text-center">
+          <h2 className="heading heading--2">
+            {listOfWorks.title}
+          </h2>
           <ul className="list-of-work">
             {
-              listOfWorks.map( (el, key) => {
+              listOfWorks.list.map( (el, key) => {
                 return <li
                   key={`item-${key}`}
                   className="list-of-work__item">
@@ -25,6 +33,7 @@ export class Homepage extends Component {
               })
             }
           </ul>
+          <Comment text={listOfWorks.comment} />
         </section>
       </div>
 
@@ -39,6 +48,9 @@ Homepage.propTypes = {
       title: PropTypes.string.isRequired,
       text: PropTypes.string
     }),
-    listOfWorks: PropTypes.array
+    listOfWorks: PropTypes.shape({
+      title: PropTypes.string,
+      list: PropTypes.array
+    })
   })
 }
