@@ -6,10 +6,11 @@ import './index.scss';
 
 export class Homepage extends Component {
   render() {
-    const { about, listOfWorks } = this.props.data;
+    const { about, listOfWorks, workingHours } = this.props.data;
 
     return(
       <div>
+
         <section className="text-center">
           <h2 className="heading heading--2">
             {about.title}
@@ -18,6 +19,7 @@ export class Homepage extends Component {
             {about.text}
           </p>
         </section>
+
         <section className="text-center">
           <h2 className="heading heading--2">
             {listOfWorks.title}
@@ -34,6 +36,26 @@ export class Homepage extends Component {
             }
           </ul>
           <Comment text={listOfWorks.comment} />
+        </section>
+
+        <section className="text-center">
+          <h2 className="heading heading-2">
+            {workingHours.title}
+          </h2>
+          <ul className="working-hours">
+            {
+              workingHours.list.map( (el, key) => {
+                return <li
+                  key={key}
+                  className="working-hours__item"
+                >
+                  <span className="working-hours__item-day">{el[0]}</span>
+                  <span className="working-hours__item-hours">{el[1]}</span>
+                </li>
+              })
+            }
+          </ul>
+
         </section>
       </div>
 
