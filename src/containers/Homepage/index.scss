@@ -1,3 +1,26 @@
+body{
+  background: url(http://www.d1gp.co.jp/img/overlays/09.png) repeat 0 0;
+}
+
+.welcome-section{
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: #fff;
+
+  background: {
+    color: #111;
+    image: url('./images/effect.jpg');
+    repeat: no-repeat;
+    position: 50% bottom;
+    size: contain;
+  }
+}
+
 .list-of-work,
 .working-hours{
   margin: 0;

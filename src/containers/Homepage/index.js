@@ -10,7 +10,15 @@ export class Homepage extends Component {
 
     return(
       <div>
+        <section className="welcome-section text-center">
+          <span>
+            welcome to
+          </span>
+          <h1>
+            stg motorsport 
+          </h1>
 
+        </section>
         <section className="text-center">
           <h2 className="heading heading--2">
             {about.title}
