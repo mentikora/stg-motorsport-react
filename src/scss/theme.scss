@@ -1,6 +1,7 @@
-@import './normalize.scss';
-@import './variables.scss';
-@import './typography.scss';
+@import './normalize';
+@import './variables';
+@import './typography';
+@import './fonts';
 
 body{
   margin: 0;
@@ -19,5 +20,14 @@ body{
   text-align: center;
 }
 
-.App{
+.container{
+  max-width: $container-width;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
 }

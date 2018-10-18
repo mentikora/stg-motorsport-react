@@ -12,7 +12,6 @@ class App extends Component {
         
         <Homepage data={defaultText.homepage}/>
 
-
       </div>
     );
   }

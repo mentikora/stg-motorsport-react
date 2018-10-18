@@ -1,0 +1,11 @@
+// working hours
+.working-hours{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item{
+    &-day{}
+    &-hours{}
+  }
+}
