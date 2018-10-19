@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../../components/Comment';
 import './index.scss';
+import { Category } from '../Category';
 
 import image from './images/test.jpg';
 
 export class Homepage extends Component {
   render() {
-    const { welcome, about, listOfWorks, workingHours } = this.props.data;
+    const { welcome, about, listOfWorks, workingHours, adress } = this.props.data;
 
     return(
       <>
@@ -26,10 +27,12 @@ export class Homepage extends Component {
           </div>
         </section>
 
-        {/* <section className="text-center">
-          <div className="container">
+        {/* categories */}
+        <section className="">
+          <div className="container container--flex">
+            <Category />
           </div>
-        </section> */}
+        </section>
 
         {/* about-us */}
         <article className="homepage-article">
@@ -92,11 +95,11 @@ export class Homepage extends Component {
           </ul>
           <Comment text={workingHours.comment} />
           <p className="adress">
-            Україна, Львів
+            {adress.location}
             <br/>
-            вул. Антоновича, 130А
+            {adress.street}
             <br/>
-            +38 (050) 430 24 99
+            {adress.tel}
           </p>
         </article>
 
@@ -123,6 +126,11 @@ Homepage.propTypes = {
     workingHours: PropTypes.shape({
       title: PropTypes.string,
       list: PropTypes.array
+    }),
+    adress: PropTypes.shape({
+      location: PropTypes.string,
+      adress: PropTypes.string,
+      tel: PropTypes.string
     })
   })
 }
