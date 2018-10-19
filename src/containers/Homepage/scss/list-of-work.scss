@@ -9,9 +9,11 @@
   justify-content: center;
 
   &__item{
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    text-align: center;
+    margin-bottom: 15px;
 
     @media(max-width: $screen-xs-max){
       width: 100%;
@@ -25,5 +27,17 @@
       max-width: percentage(1/3);
       flex: 0 0 percentage(1/3);
     }
+  }
+
+  .icon{
+    margin-bottom: 5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $primary-color;
+    font-size: 35px;
+    line-height: 35px;
   }
 }

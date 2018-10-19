@@ -60,7 +60,10 @@ export class Homepage extends Component {
                   return <li
                     key={`item-${key}`}
                     className="list-of-work__item">
-                      {el}
+                      <div className="icon">
+                        <i className={el[1]}></i>
+                      </div>
+                      {el[0]}
                     </li>
                 })
               }
