@@ -1,11 +1,50 @@
 // working hours
 .working-hours{
-  margin: 0;
   padding: 0;
   list-style: none;
 
-  &__item{
-    &-day{}
-    &-hours{}
+  max-width: 70%;
+  margin: {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: auto;
   }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item{
+    margin: {
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+    }
+    display: flex;
+    align-items: center;
+
+    &-day{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 35px;
+      height: 35px;
+      margin-right: 15px;
+
+      font: {
+        size: 12px;
+        weight: bold;
+        family: $secondary-font;
+      }
+
+      color: #fff;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.adress{
+  margin-top: 15px;
 }

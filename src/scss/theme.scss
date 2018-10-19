@@ -30,4 +30,49 @@ body{
     left: 15px;
     right: 15px;
   }
+
+  &--flex{
+    display: flex;
+
+    @media(max-width: $screen-sm-max){
+      flex-direction: column;
+    }
+  }
+}
+
+.image-bordered{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: -15px 15px 0 0 #ccc;
+
+  @media(max-width: $screen-sm-max){
+    margin-top: 25px;
+  }
+}
+
+.homepage-article{
+  padding: {
+    top: 25px;
+    bottom: 25px;
+  }
+}
+
+.side{
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
+  
+  
+  @media(min-width: $screen-sm){
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+
+  &.align-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

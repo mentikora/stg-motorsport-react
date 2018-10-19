@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../../components/Comment';
-import Image from '../../components/Image';
-
 import './index.scss';
 
-import image from './images/test.png';
+import image from './images/test.jpg';
 
 export class Homepage extends Component {
   render() {
@@ -34,39 +32,45 @@ export class Homepage extends Component {
         </section> */}
 
         {/* about-us */}
-        <article className="">
-          <div className="container">
-            <h2 className="heading heading--2">
-              {about.title}
-            </h2>
-            <p>
-              {about.text}
-            </p>
-            <img src={image} alt="alt" />
+        <article className="homepage-article">
+          <div className="container container--flex">
+            <div className="side align-center">
+              <h2 className="heading heading--2">
+                {about.title}
+              </h2>
+              <p>
+                {about.text}
+              </p>
+            </div>
+            <div className="side align-center">
+              <img className="image-bordered" src={image} alt="alt" />
+            </div>
           </div>
         </article>
 
         {/* list-of-work */}
-        <article className="text-center">
-          <h2 className="heading heading--2">
-            {listOfWorks.title}
-          </h2>
-          <ul className="list-of-work">
-            {
-              listOfWorks.list.map( (el, key) => {
-                return <li
-                  key={`item-${key}`}
-                  className="list-of-work__item">
-                    {el}
-                  </li>
-              })
-            }
-          </ul>
-          <Comment text={listOfWorks.comment} />
+        <article className="homepage-article text-center">
+          <div className="container">
+            <h2 className="heading heading--2">
+              {listOfWorks.title}
+            </h2>
+            <ul className="list-of-work">
+              {
+                listOfWorks.list.map( (el, key) => {
+                  return <li
+                    key={`item-${key}`}
+                    className="list-of-work__item">
+                      {el}
+                    </li>
+                })
+              }
+            </ul>
+            <Comment text={listOfWorks.comment} />
+          </div>
         </article>
         
         {/* working hours */}
-        <article className="text-center">
+        <article className="homepage-article text-center">
           <h2 className="heading heading-2">
             {workingHours.title}
           </h2>
@@ -83,6 +87,14 @@ export class Homepage extends Component {
               })
             }
           </ul>
+          <Comment text={workingHours.comment} />
+          <p className="adress">
+            Україна, Львів
+            <br/>
+            вул. Антоновича, 130А
+            <br/>
+            +38 (050) 430 24 99
+          </p>
         </article>
 
       </>

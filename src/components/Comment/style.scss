@@ -1,3 +1,30 @@
 .comment{
-  background: #ccc;
+  max-width: 500px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  padding: {
+    left: 50px;
+    top: 25px;
+    bottom: 25px;
+    right: 25px;
+  }
+  border: 1px solid #F8FBFD;
+  border-radius: 10px;
+
+  text-align: left;
+  font: {
+    size: 14px;
+    style: italic;
+  }
+  color: #868F9B;
+
+  background: {
+    image: url('./images/quotes.png');
+    repeat: no-repeat;
+    position: 15px 15px;
+  }
+
+  box-shadow: 0px 4px 20px rgba(58, 109, 125, 0.1);
 }

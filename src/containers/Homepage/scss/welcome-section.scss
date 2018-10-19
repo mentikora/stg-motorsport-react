@@ -19,6 +19,20 @@
     position: 50%;
   }
 
+  @media(max-width: $screen-md-max){
+    padding: {
+      top: 150px;
+      bottom: 150px;
+    }
+  }
+
+  @media(min-width: $screen-md){
+    padding: {
+      top: 300px;
+      bottom: 300px;
+    }
+  }
+
   // black filter under whole background
   &::after{
     content: '';

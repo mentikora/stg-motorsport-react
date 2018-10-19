@@ -4,9 +4,26 @@
   padding: 0;
   list-style: none;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   &__item{
     margin-bottom: 15px;
 
-    text-transform: uppercase;
+    text-align: center;
+
+    @media(max-width: $screen-xs-max){
+      width: 100%;
+      flex: 0 0 100%;
+    }
+    @media(min-width: $screen-xs) and (max-width: $screen-sm-max){
+      max-width: percentage(1/2);
+      flex: 0 0 percentage(1/2);
+    }
+    @media(min-width: $screen-sm){
+      max-width: percentage(1/3);
+      flex: 0 0 percentage(1/3);
+    }
   }
 }

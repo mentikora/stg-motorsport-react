@@ -1,8 +1,13 @@
 // heading's
 .heading{
   display: inline-block;
-  padding-left: 15px;
-  border-left: 4px solid $primary-color;
+  // padding-left: 15px;
+  // border-left: 4px solid $primary-color;
+
+  margin: {
+    top: 10px;
+    bottom: 20px;
+  }
 
   font: {
     family: $secondary-font;
@@ -31,4 +36,8 @@
 
 .subheading{
   text-transform: uppercase;
+}
+
+p{
+  margin: 0;
 }
